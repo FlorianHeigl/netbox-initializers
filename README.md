@@ -39,5 +39,6 @@ To use the new plugin in a the Netbox Docker image, it musst be installad into t
 
 ```dockerfile
 FROM netboxcommunity/netbox:v4.2
-RUN /opt/netbox/venv/bin/pip install "netbox-initializers==4.2.*"
+ENV VIRTUAL_ENV=/opt/netbox/venv
+RUN usr/local/bin/uv pip install "netbox-initializers==4.2.*"
 ```
